@@ -10,15 +10,24 @@ export class ContactComponent {
   title: string = "Contact Page"
   formData: {
     name: string,
-    email: string
+    email: string,
+    phoneNumber: string,
+    class: string
   } = {
     name: '',
-    email: ''
+    email: '',
+    phoneNumber: '',
+    class: ''
   };
 
 
   constructor() {
+  
 
+  }
+
+  submit(){
+    console.log("we submit up in here", this.formData)
   }
 
 }

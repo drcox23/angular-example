@@ -4,15 +4,24 @@
 
 <form action="">
   <span>Name: </span>
-  <input type="text" name="name" id="name" value="" [(ngModel)]="formData.name">
+  <input type="text" name="name" id="name" value="" [(ngModel)]="formData.name" >
   <br />
   <span>Email: </span>
   <input type="text" name="email" id="email" value="" [(ngModel)]="formData.email">
   <br />
   <span>Phone Number: </span> 
-  <input type="text" name="phoneNumber" id="phoneNumber" value="">
+  <input type="text" name="phoneNumber" id="phoneNumber" value="" [(ngModel)]="formData.phoneNumber">
 </form>
 
+<div [class]="formData.name === 'doug' ? 'test' : ''">
 {{ formData.name }}
+</div>
 <br >
 {{ formData.email}}
+<br >
+{{ formData.phoneNumber}}
+<br >
+
+
+<br><br>
+<button (click)="submit()">Submit</button>
