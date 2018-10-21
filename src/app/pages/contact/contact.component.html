@@ -1,0 +1,18 @@
+<h1>
+  {{ title }}
+</h1>
+
+<form action="">
+  <span>Name: </span>
+  <input type="text" name="name" id="name" value="" [(ngModel)]="formData.name">
+  <br />
+  <span>Email: </span>
+  <input type="text" name="email" id="email" value="" [(ngModel)]="formData.email">
+  <br />
+  <span>Phone Number: </span> 
+  <input type="text" name="phoneNumber" id="phoneNumber" value="">
+</form>
+
+{{ formData.name }}
+<br >
+{{ formData.email}}
