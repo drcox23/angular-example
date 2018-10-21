@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BackendService } from '../../services/backend.service';
 
 @Component({
   selector: 'home-page',
@@ -15,13 +16,22 @@ export class HomeComponent implements OnInit {
     header: 'header'
   };
 
-  constructor() { 
+  constructor(private backend: BackendService) { 
     const subtitle: string = "This is really awesome";
     this.subtitle = subtitle;
     
   }
 
   ngOnInit() {
+    this.characters = this.backend.characters;
+
+    this.backend.addCharacter({ name: 'doug' });
+    this.characters.push({ name: 'baseem' });
+
+    this.backend.getCharacter(20)
+    .then((data) => {
+      console.log(data);
+    });
   }
 
 }
