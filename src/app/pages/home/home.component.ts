@@ -16,6 +16,8 @@ export class HomeComponent implements OnInit {
     header: 'header'
   };
 
+  characters: any[];
+
   constructor(private backend: BackendService) { 
     const subtitle: string = "This is really awesome";
     this.subtitle = subtitle;
