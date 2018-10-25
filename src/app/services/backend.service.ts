@@ -22,4 +22,17 @@ export class BackendService {
     this.characters.push(character);
   }
 
+  register(data){
+    return Promise.resolve({});
+      // mocking up an fake call to the backend
+  }
+
+  login(data) {
+    return Promise.resolve({ username: data.usernam });
+  }
+
+  logout() {
+    return Promise.resolve({});
+  }
+
 }

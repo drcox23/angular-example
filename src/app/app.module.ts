@@ -11,6 +11,8 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { BackendService } from './services/backend.service';
+import { SessionService } from './services/session.service';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { BackendService } from './services/backend.service';
 
   ],
   providers: [
-    BackendService
+    BackendService,
+    SessionService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
