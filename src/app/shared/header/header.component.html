@@ -1,4 +1,4 @@
-<ul>
+<!-- <ul>
   <li>
     <a routerLink="/">Home</a>
   </li>
@@ -10,4 +10,41 @@
   <li>
     <a routerLink="/contact">Contact</a>
   </li>
-</ul>
+
+  <li>
+    <a routerLink="/login">Login</a>
+  </li>
+</ul> -->
+
+<div class="header-container">
+  <div class="header-left">
+    <ul>
+      <li>
+        <h2>
+          <a routerLink="/">Home</a>
+        </h2>
+      </li>
+      <li>
+        <h2>
+          <a routerLink="about">About</a>
+        </h2>
+      </li>
+      <li>
+        <h2>
+          <a routerLink="contact">Contact</a>
+        </h2>
+      </li>
+    </ul>
+  </div>
+
+  <div class="header-right">
+    <div class="logged-in" *ngIf="isLoggedIn()">
+      Welcome, {{user.username}}
+      <button (click)="logout()">Log Out</button>
+    </div>
+
+    <div class="logged-out" *ngIf=!user.loggedIn>
+      <button (click)="login()">Log In</button>
+    </div>
+  </div>
+</div>
